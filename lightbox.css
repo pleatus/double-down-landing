@@ -1,0 +1,61 @@
+.lightbox {
+    /* Default to hidden */
+    display: none;
+  
+    /* Overlay entire screen */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    /* A bit of padding around image */
+    padding: 1em;
+  
+    /* Translucent background */
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Unhide the lightbox when it's the target */
+  .lightbox:target {
+    display: block;
+  }
+  
+  .lightbox div {
+    /* Full width and height */
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    /* Size and position background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  /*modal image links*/
+  #sure-thing-dd-03 div {
+    background-image: url('imgs/double-down-carpet-tile-sure-thing-dd-03.jpg');
+  }
+  #on-target-dd-04 div {
+    background-image: url('imgs/double-down-carpet-tile-on-target-dd-04.jpg');
+  }
+  #sure-thing-dd-03-carpet-tile-in-commons div {
+    background-image: url('imgs/double-down-carpet-tile-sure-thing-dd-03-carpet-tile-in-commons.jpg');
+  }
+  #sure-thing-dd-03-carpet-tile-in-office div {
+    background-image: url('imgs/double-down-carpet-tile-sure-thing-dd-03-carpet-tile-in-office.jpg');
+  }
+  #on-target-dd-04-casual-office div {
+    background-image: url('imgs/double-down-carpet-tile-on-target-dd-04-casual-office.jpg');
+  }
+  #on-target-dd-04-tech-office div {
+    background-image: url('imgs/double-down-carpet-tile-on-target-dd-04-tech-office.jpg');
+  }
+  #dd-03-dd-04-high-traffic-area div {
+    background-image: url('imgs/double-down-carpet-tile-dd-03-dd-04-high-traffic-area.jpg');
+  }
+  #dd-03-dd-04-office-reception div {
+    background-image: url('imgs/double-down-carpet-tile-dd-03-dd-04-office-reception.jpg');
+  }

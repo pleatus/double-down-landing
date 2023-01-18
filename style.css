@@ -1,0 +1,75 @@
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: min-content auto min-content;
+    grid-template-columns: 3fr 1fr;
+}
+header {
+    background-color: blue;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+main {
+    background-color: red;
+    grid-column: 1;
+    grid-row: 2/3;
+}
+article {
+    background-color: blue;
+    grid-column: 1/3;
+    grid-row: 2/2;
+}
+div.products {
+    background-color: green;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+a.gallery-item {
+    display: block;
+}
+div.product-gallery {
+    background-color: purple;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+img.gallery-image {
+    max-width: 230px;
+}
+aside {
+    background-color: greenyellow;
+    grid-column: 2;
+    grid-row: 1/3;
+}
+footer {
+    background-color: blue;
+    grid-column: 1/2;
+    grid-row: 3/3;
+}
+.product-image, .product-title, .product-code, .gallery-image, .gallery-item-title {
+    display: block;
+}
+.product-card, .gallery-item {
+    text-align: center;
+    margin: auto;
+}
+
+/*PRODUCT FEATURE IMAGE STYLING*/
+.feature-container img {
+    display: block;
+    margin: 1rem auto auto 3rem;
+    width: 9rem;
+    height: 9rem;
+}
+.feature-list {
+    margin-left: 2rem;
+}
+
+@media (min-width: 400px) {
+    .grid {
+        display:block;
+    }
+}
