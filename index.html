@@ -13,8 +13,8 @@
 			<main>
 				<div id="mailing-list-modal"><p>Get The Scoop on Elekto's New Products, and Deals, Right In Your Inbox &#10145;</p>
 					<form id="mailing-list">
-						<input type="email" placeholder="Your Email"></input>
-						<button>&#9993;</button>
+						<input type="email" placeholder="Your Email" id="email" required>
+						<input type="submit" value="&#9993;">
 						<span id="hide-mailing-list-modal" onclick="document.getElementById('mailing-list-modal').style.display='none';">&#10060;</span>
 					</form>
 				</div>
@@ -91,6 +91,9 @@
 				</article>
 			</main>
 			<aside>
+				<div class="sidebar-product-logo">
+					<img title="Double Down Carpet Tile By Elekto Design Alternative Logo" alt="Double Down Carpet Tile By Elekto Design Alternative Logo" src="imgs/DOUBLE-DOWN-LOGO-2.png"/>
+				</div>
 				<h4>Features</h4>
 				<ul class="feature-list">
 					<li>Vibrant Colour That Resists Fading</li>
@@ -146,4 +149,64 @@
 <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+<script>
+	/*
+	window.addEventListener('load', function () {
+		const mailModal = document.getElementById('mailing-list-modal');
+		let modalStateArray = ['3px dashed yellow','3px dotted yellow','3px dashed white','3px dotted white'];
+		var modalState = modalStateArray[3];
+		mailModal.style.border = modalState;
+		console.log('hihihihihihihhi ' + modalState);
+		console.log(mailModal.style.border);
+		var newModalState = '';
+		let modalStateChange = setInterval(findModalState,4000,modalState,modalStateArray);
+		function findModalState(current,allStates) {
+			console.log('change modal state has been called and current var is set to ' + current);	
+			if (current === allStates[3]) {
+				console.log('current matches allstates 3');
+				newModalState = 0;
+			}
+			else {
+				//console.log('all states length is ' + allStates.length);
+				for (i = 0;i < allStates.length;i++) {
+					console.log('loop ' + i + ' all states reads ' + allStates[i] + ' current reads as ' + current);
+					if (allStates[i] === current) {
+						console.log('collision detected. all states ' + allStates[i] + ' current state ' + current + ' new modal state is ' + newModalState);
+						newModalState = i + 1;
+						break;
+					}
+				}
+			}
+			console.log(newModalState);
+			changeModalState(newModalState,allStates);
+		}
+		function changeModalState (x,y) {
+			console.log('new modal state from change modal state is ' + x);
+			modalState = y[x];
+			mailModal.style.border = modalState;
+		}
+		//setInterval(changeModalState(),4000);
+	});
+
+	document.getElementById("mailing-list").addEventListener("submit", function(event){
+	event.preventDefault();
+	var email = document.getElementById("email").value;
+	
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'https://us20.api.mailchimp.com/subscribe/post-json?u=3574d9387c&id=mailing-list', true);
+	xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var jsonResponse = JSON.parse(xhr.responseText);
+			if(jsonResponse.result === 'success'){
+				alert('Thank you for subscribing!');
+			} else {
+				alert(jsonResponse.msg);
+			}
+		}
+	};
+	xhr.send(JSON.stringify({EMAIL: email}));
+	});
+	*/
+</script>
 </body>
