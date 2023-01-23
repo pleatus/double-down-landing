@@ -28,7 +28,7 @@ header {
 }
 main {
     grid-area: main;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0);
 }
 #mailing-list-modal {
     text-align:center;
@@ -51,6 +51,10 @@ main {
 #hide-mailing-list-modal {
     cursor: pointer;
 }
+.product-branding {
+    background: #c9c9c9;
+    border: 1rem solid #292929;
+}
 .product-tagline, .product-logo, .sidebar-product-logo {
     text-align: center;
     margin-top: 2rem;
@@ -72,6 +76,15 @@ article {
     margin: 2rem auto;
     display: flex;
     justify-content: center;
+    border-radius: 1rem;
+    border: 1px solid white;
+    box-shadow: 1px 1px;
+    background: orangered;
+    color: white;
+}
+.shop-now:hover {
+    color: yellow;
+    border: 1px solid yellow;
 }
 article > h3 {
     text-align: center;
@@ -112,6 +125,14 @@ div.products {
     margin: 2rem auto;
     display: flex;
     justify-content: center;
+    background-color: green;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+.buy-product:hover {
+    color: yellow;
+    border: 1px solid yellow;
 }
 .product-image, .product-title, .product-code, .gallery-image, .gallery-item-title {
     display: block;
@@ -147,9 +168,15 @@ img.gallery-image {
     font-size: larger;
     font-family: 'Georgia', serif;
 }
+.product-carton {
+    width: 294px;
+    margin-left: auto;
+    margin-right: auto;
+}
 aside {
     grid-area: aside;
     background-color: #c9c9c9;
+    border: 1rem solid #292929;
 }
 aside > h4 {
     text-align: center;
@@ -180,7 +207,7 @@ footer {
     height: 9rem;
 }
 .feature-list {
-    margin-left: 2rem;
+    margin: 0;
     font-size: x-large;
     font-family: 'Georgia', serif;
 }
