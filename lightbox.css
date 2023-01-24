@@ -33,7 +33,20 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
-
+  .lightbox-title {
+    text-align: center;
+    display: inline;
+    float: left;
+    z-index: 100;
+    position: absolute;
+    bottom: 10;
+    width: 100%;
+    font-size: x-large;
+    font-weight: bold;
+    color: #c9c9c9;
+    text-shadow: rgba(255,255,255,0.2) 2px 1px;
+    background-color: #090909;
+  }
   /*modal image links*/
   #sure-thing-dd-03 div {
     background-image: url('imgs/double-down-carpet-tile-sure-thing-dd-03.jpg');
