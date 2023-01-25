@@ -1,8 +1,11 @@
 <html>
 <head>
 <title>Double Down Carpet Tile by Elekto Design</title>
-<link rel="stylesheet" href="lightbox.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/lightbox.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 </head>
 <body>
@@ -11,7 +14,7 @@
 			<a href="https://elektodesign.ca" target="_blank" title="Elekto Design Homepage" alt="Elekto Design Homepage"><h1>Elekto Design</h1></a>
 		</header>
 			<main>
-				<div id="mailing-list-modal"><p>Get The Scoop on Elekto's New Products, and Deals, Right In Your Inbox &#10145;</p>
+				<div id="mailing-list-modal"><p>Get Elekto's New Products, and Fresh Deals, Right In Your Inbox</p>
 					<form id="mailing-list">
 						<input type="email" placeholder="Your Email" id="email" required>
 						<input type="submit" value="&#9993;">
@@ -102,11 +105,11 @@
 				<h4>Features</h4>
 				<ul class="feature-list">
 					<li>50cm x 50cm Tiles (19.7" x 19.7")</li>
-					<li>Two Styles To Choose From</li>
-					<li>Mix + Match Styles For Stunning Effects</li>
 					<li>Vibrant Colour That Resists Fading</li>
 					<li>Designed For Commercial Use</li>
 					<li>Engineered For High Traffic Areas</li>
+					<li>Two Styles To Choose From</li>
+					<li>Mix + Match Styles For Stunning Effects</li>
 				</ul>
 				<div class="feature-container">
 					<img id="feature-durable" title="Double Down Carpet Tile: Durable" alt="Double Down Carpet Tile: Durable" src="imgs/elekto-design-durable.png"/>
@@ -116,15 +119,15 @@
 				</div>
 				<h4>Related Products</h4>
 				<ul class="related-products">
-					<a href="https://profusion.elektodesign.ca" target="_blank" title="Profusion Carpet Tile by Elekto Design" alt="Profusion Carpet Tile by Elekto Design"><li>Profusion</li></a>
-					<a href="https://luckybreak.elektodesign.ca" target="_blank" title="Lucky Break Carpet Tile by Elekto Design" alt="Lucky Break Carpet Tile by Elekto Design"><li>Lucky Break</li></a>
+					<a href="https://profusion.elektodesign.ca" target="_blank" title="Profusion Carpet Tile by Elekto Design" alt="Profusion Carpet Tile by Elekto Design"><li>Profusion Carpet Tile</li></a>
+					<a href="https://luckybreak.elektodesign.ca" target="_blank" title="Lucky Break Carpet Tile by Elekto Design" alt="Lucky Break Carpet Tile by Elekto Design"><li>Lucky Break Carpet Tile</li></a>
 				</ul>
 				<h4>More Products</h4>
 				<ul class="more-products">
-					<a href="https://timeless.elektodesign.ca" target="_blank" title="Timeless Cascade Collection Laminate by Elekto Design" alt="Timeless Cascade Collection Laminate by Elekto Design"><li>Timeless</li></a>
-					<a href="https://gravityspcflooring.ca" target="_blank" title="Gravity Essential Series SPC Flooring by Elekto Design" alt="Gravity Essential Series SPC Flooring by Elekto Design"><li>Gravity</li></a>
+					<a href="https://timeless.elektodesign.ca" target="_blank" title="Timeless Cascade Collection Laminate by Elekto Design" alt="Timeless Cascade Collection Laminate by Elekto Design"><li>Timeless Cascade Collection Laminate</li></a>
+					<a href="https://gravityspcflooring.ca" target="_blank" title="Gravity Essential Series SPC Flooring by Elekto Design" alt="Gravity Essential Series SPC Flooring by Elekto Design"><li>Gravity Essential Series SPC</li></a>
 				</ul>
-				<a class="learn-more-anchor" href="https://elektodesign.ca/about" target="_blank" title="Learn More About Elekto Design" alt="Learn More About Elekto Design"><button class="learn-more">LEARN MORE</button></a>
+				<a class="learn-more-anchor" href="https://elektodesign.ca/" target="_blank" title="Learn More About Elekto Design" alt="Learn More About Elekto Design"><button class="learn-more">LEARN MORE</button></a>
 			</aside>
 		<a href="#_" class="lightbox" id="sure-thing-dd-03">
 			<div>
@@ -174,63 +177,31 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
 <script>
-	/*
 	window.addEventListener('load', function () {
 		const mailModal = document.getElementById('mailing-list-modal');
-		let modalStateArray = ['3px dashed yellow','3px dotted yellow','3px dashed white','3px dotted white'];
-		var modalState = modalStateArray[3];
-		mailModal.style.border = modalState;
-		console.log('hihihihihihihhi ' + modalState);
-		console.log(mailModal.style.border);
+		let modalStateArray = ['3px dashed yellow','3px dotted white','3px dotted yellow','3px dashed white'];
+		let textStateArray = ['white','yellow'];
+		var modalState = modalStateArray[0];
 		var newModalState = '';
-		let modalStateChange = setInterval(findModalState,4000,modalState,modalStateArray);
+		mailModal.style.border = modalState;
+		let modalStateChange = setInterval(changeModalState,2000,modalState,modalStateArray);
 		function findModalState(current,allStates) {
-			console.log('change modal state has been called and current var is set to ' + current);	
-			if (current === allStates[3]) {
-				console.log('current matches allstates 3');
-				newModalState = 0;
-			}
-			else {
-				//console.log('all states length is ' + allStates.length);
 				for (i = 0;i < allStates.length;i++) {
-					console.log('loop ' + i + ' all states reads ' + allStates[i] + ' current reads as ' + current);
 					if (allStates[i] === current) {
-						console.log('collision detected. all states ' + allStates[i] + ' current state ' + current + ' new modal state is ' + newModalState);
-						newModalState = i + 1;
-						break;
+						newModalState++;
+						if (newModalState === 4) {
+							newModalState = 0;
+						}
+						return newModalState;
 					}
 				}
-			}
-			console.log(newModalState);
-			changeModalState(newModalState,allStates);
 		}
 		function changeModalState (x,y) {
-			console.log('new modal state from change modal state is ' + x);
-			modalState = y[x];
-			mailModal.style.border = modalState;
+			let changeTo = findModalState(x,y);
+			mailModal.style.color = textStateArray[changeTo%2];
+			mailModal.style.border = y[changeTo];
 		}
-		//setInterval(changeModalState(),4000);
 	});
-
-	document.getElementById("mailing-list").addEventListener("submit", function(event){
-	event.preventDefault();
-	var email = document.getElementById("email").value;
-	
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST', 'https://us20.api.mailchimp.com/subscribe/post-json?u=3574d9387c&id=mailing-list', true);
-	xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			var jsonResponse = JSON.parse(xhr.responseText);
-			if(jsonResponse.result === 'success'){
-				alert('Thank you for subscribing!');
-			} else {
-				alert(jsonResponse.msg);
-			}
-		}
-	};
-	xhr.send(JSON.stringify({EMAIL: email}));
-	});
-	*/
 </script>
+<script src="js/mailing-list.js"></script>
 </body>
