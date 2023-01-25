@@ -205,6 +205,14 @@ img.gallery-image {
     margin-left: auto;
     margin-right: auto;
 }
+.product-basics-list {
+    text-align: center;
+}
+.product-basics-list ul {
+    list-style-type: none;
+    margin-top: 1rem;
+    padding: 0;
+}
 aside {
     grid-area: aside;
     background-color: #c9c9c9;
@@ -218,7 +226,10 @@ aside > h4 {
     text-align: center;
     font-size: xxx-large;
 }
-aside ul {
+.feature-list {
+    list-style-type: '\2713';
+}
+.related-products, .more-products {
     list-style-type: none;
 }
 aside ul li {
@@ -252,14 +263,23 @@ aside ul li {
     margin: 1rem auto;
     width: 9rem;
     height: 9rem;
+    border: 1px solid black;
+    border-radius: 1rem;
 }
 .feature-container img:hover {
     filter: invert(100%);
 }
 .feature-list {
-    margin: 0;
+    margin: 1rem;
+    padding: 1rem;
     font-size: x-large;
     font-family: 'Georgia', serif;
+    color: green;
+}
+.feature-list-content {
+    position: relative;
+    left: 8px;
+    color: black;
 }
 .related-products, .more-products {
     font-size: x-large;
